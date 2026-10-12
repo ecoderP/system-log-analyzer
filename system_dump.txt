@@ -1,0 +1,16 @@
+2026-10-04T05:31:01.124Z local-auth-srvss sshd[14022]: INFO: Accepted publickey for admin from 192.168.1.45 port 54822 ssh2: RSA SHA256:dGhpcyBpcyBhIHNhbXBsZSBsb2cK
+2026-10-04T05:32:15.892Z app-node-01 kernel: [48102.102931] WARNING: Out of memory: Kill process 29910 (node) score 842 or sacrifice child
+2026-10-04T05:33:00.005Z cron-daemon[911]: INFO: (root) CMD (bin/cleanup_sessions.sh > /dev/null 2>&1)
+2026-10-04T05:34:12.441Z db-primary postgres[3012]: ERROR: duplicate key value violates unique constraint "users_email_key"
+2026-10-04T05:34:15.109Z edge-router-02 openvpn[882]: CRITICAL: TLS Error: TLS handshake failed after 30 seconds (timeout)
+2026-10-04T05:00:01.123456Z host-01 systemd[1]: Starting System Logging Service...
+2026-10-04T05:00:01.150123Z host-01 kernel: [    0.000000] Linux version 6.8.0-45-generic (buildd@lcy02-amd64-001)
+2026-10-04T05:00:01.180999Z host-01 kernel: [    0.412034] pci 0000:00:00.0: [8086:1911] type 00 class 0x060000
+2026-10-04T05:00:01.890000Z host-01 systemd[1]: Started System Logging Service.
+2026-10-04T05:00:02.012345Z host-01 sshd[412]: Server listening on 0.0.0.0 port 22.
+2026-10-04T05:00:02.450000Z host-01 NetworkManager[520]: <info>  [1728018002.4500] device (eth0): state changed : unavailable -> disconnected
+2026-10-04T05:00:03.100234Z host-01 dbus-daemon[310]: [system] Successfully activated service 'org.freedesktop.hostname1'
+2026-10-04T05:00:03.820111Z host-01 NetworkManager[520]: <info>  [1728018003.8200] device (eth0): state changed : disconnected -> connected
+2026-10-04T05:00:04.200999Z host-01 systemd-logind[380]: CRITICAL: New session 1 of user admin.
+2026-10-04T05:00:05.001234Z host-01 CRON[610]: (CRON) startup (v4.1): CRITICAL
+

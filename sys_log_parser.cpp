@@ -90,7 +90,7 @@ bool processLogs(std::ifstream& fileStream, int counter[], const std::string err
 // This function creates a summary of reports from error log
 bool writeCSVReport(std::ofstream& outputStream, const int counter[], const std::string errorWords[], int arrSize)
 {
-	outputStream << "Log_Level,Line_Count \n";
+	outputStream << "Log_Level,Count\n";
 
 	for (int index{}; index < arrSize; ++index)
 	{

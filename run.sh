@@ -1,4 +1,3 @@
-```bash
 #!/bin/bash
 
 # ==============================================================================
@@ -18,8 +17,8 @@ set -euo pipefail
 # Configuration
 # ================================================
 
-SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
-PARSER_SOURCE="$SCRIPT_DIR/parser.cpp"
+SCRIPT_DIR="."
+PARSER_SOURCE="$SCRIPT_DIR/sys_log_parser.cpp"
 PARSER_BINARY="$SCRIPT_DIR/parser"
 PYTHON_PIPELINE="$SCRIPT_DIR/controller.py"
 
@@ -92,4 +91,3 @@ echo "[Bash] Starting Python application pipeline..."
 echo "-----------------------------------------------------"
 
 exec python3 "$PYTHON_PIPELINE"
-```

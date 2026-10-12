@@ -15,7 +15,7 @@ import csv
 BASE_DIR = Path(__file__).resolve().parent
 
 CPP_BINARY = BASE_DIR / "parser"
-INPUT_FILE = BASE_DIR / "system_dump.txt" # This is the path to our cpp program
+INPUT_FILE = BASE_DIR / "system_dump.txt" # This is the path to our system log file
 CSV_REPORT = BASE_DIR / "error_report.csv"
 
 CRITICAL_THRESHOLD = 0  # This ensures we get an alert if any critical errors are found
@@ -110,7 +110,7 @@ def analyze_results() -> bool:
         )
         return False
 
-    required_columns = {"Log_Level", "Count"}
+    required_columns = {"Log_Level","Count"}
 
     total_faults = 0
     critical_alerts = 0
@@ -168,7 +168,7 @@ def analyze_results() -> bool:
                 )
 
                 if (
-                    log_level == "CRITICAL"
+                    log_level == "CRITICAL".strip().upper()
                     and count > CRITICAL_THRESHOLD
                 ):
                     critical_alerts += count
@@ -187,19 +187,19 @@ def analyze_results() -> bool:
     # Diagnostic evaluation
     if critical_alerts > 0:
         print(
-            "🚨 [ALERT] CRITICAL system errors detected. "
+            "[ALERT] CRITICAL system errors detected. "
             "Immediate investigation required."
         )
 
-    elif total_faults > TOTAL_FAULT_THRESHOLD:
+    elif total_faults > ERROR_THRESHOLD:
         print(
-            "⚠️ [WARNING] Total system fault threshold exceeded. "
+            "[WARNING] Total system fault threshold exceeded. "
             "Review system logs."
         )
 
     else:
         print(
-            "✅ [PASS] System diagnostic parameters are "
+            "[PASS] System diagnostic parameters are "
             "within acceptable operational limits."
         )
 
